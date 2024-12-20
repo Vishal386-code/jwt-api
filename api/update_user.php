@@ -41,7 +41,7 @@ if($jwt){
                     "email" => $user->email
                 )
              );
-             print_r($token); die;
+            //  print_r($token); die;
              $jwt = JWT::encode($token, $key, 'HS256');
              http_response_code(200);
              echo json_encode(
